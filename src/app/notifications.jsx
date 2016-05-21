@@ -3,9 +3,8 @@
 // Notification class that wraps the Notification API
 // https://developer.mozilla.org/en-US/docs/Web/API/notification
 // Prashanth R
-
 */
-class NotificationBase {
+module.exports = function NotificationBase {
     private notification;
     constructor(){
     	this.initialize();
