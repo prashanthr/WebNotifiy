@@ -7,14 +7,17 @@ module.exports = function notificationBase() {
 	this.notification = null;
 
 	this.areNotificationsSupported = function() {
-    	let isSupported = true;
-    	if (!("Notification" in window)) {
-	    console.warn("This browser does not support desktop notifications");
-	  	isSupported = false;
-	  } else {
-        console.log("Notifications are supported");
-      }
-	  return isSupported;
+    	let isSupported = false;
+    	if(window) {
+            if (!("Notification" in window)) {
+            console.warn("This browser does not support desktop notifications");
+            isSupported = false;
+          } else {
+            console.log("Notifications are supported");
+            isSupported = true;
+          }
+        }
+	    return isSupported;
     }
 
     this.requestPermission = function() {
