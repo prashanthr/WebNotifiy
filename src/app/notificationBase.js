@@ -34,9 +34,7 @@ module.exports = function notificationBase() {
     //initialize
     if(this.areNotificationsSupported()) {
         if(!this.hasPermissionBeenGranted()) {
-            this.requestPermission().then({
-                console.log('Permission has beeen requested');
-            });
+            this.requestPermission();
         }
     }
 }
