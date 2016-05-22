@@ -5,7 +5,7 @@ var notify = require('../../app/notify');
 
 describe('notify', function() {
   it('notifyTest', function() {
-    let notify = new notify();
-    expect(notify.base.notification).to.not.equal();
+    let notifyInstance = new notify();
+    expect(notifyInstance.base.notification).to.not.equal();
   });
 });
