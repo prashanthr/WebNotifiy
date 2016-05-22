@@ -7,7 +7,7 @@ module.exports = function notificationBase() {
 	this.notification = null;
 
 	this.areNotificationsSupported = function() {
-    	let isSupported = false;
+    	var isSupported = false;
     	if(window) {
             if (!("Notification" in window)) {
             console.warn("This browser does not support desktop notifications");

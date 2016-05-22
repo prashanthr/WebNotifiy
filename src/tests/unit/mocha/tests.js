@@ -1,10 +1,9 @@
-console.log('testing...');
 var chai = require('chai');
-var expect = chai.expect; // we are using the "expect" style of Chai
+var expect = chai.expect;
 var notify = require('../../../app/notify');
 
-describe('notify', function() {
-  it('notifyTest', function() {
+describe('notifyTests', function() {
+  it('notifyInstanceIsValid', function() {
     let notifyInstance = new notify();
     expect(notifyInstance.base.notification).to.not.equal(undefined);
   });

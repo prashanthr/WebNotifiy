@@ -4,7 +4,7 @@
   "description": "A light weight implementation of the Notification Web API",
   "main": "app/notify.js",
   "scripts": {
-    "test": "mocha --use_strict tests/unit/mocha/tests.js",
+    "test": "mocha tests/unit/mocha-jsdom/tests.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   "devDependencies": {
     "browserify": "^13.0.1",
     "chai": "^3.5.0",
+    "jsdom": "^9.1.0",
     "mocha": "^2.4.5",
     "mocha-jsdom": "^1.1.0",
     "path": "^0.12.7",
