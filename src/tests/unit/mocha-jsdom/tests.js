@@ -11,7 +11,7 @@ describe('notifyTests', function () {
   it('notifyInstanceIsValid', function () {
   	var notifyInstance = new notify();
     var notification = notifyInstance.base.notification;
-    //expect(notification).to.not.equal(undefined);
+    expect(notification).to.not.equal(undefined);
   	expect(notifyInstance).to.be.ok;
   })
  
