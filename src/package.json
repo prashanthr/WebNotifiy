@@ -1,0 +1,30 @@
+{
+  "name": "webnotify",
+  "version": "1.0.0",
+  "description": "A light weight implementation of the Notification Web API",
+  "main": "app/notify.js",
+  "scripts": {
+    "test": "mocha --use_strict tests/mocha/tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prashanthr/WebNotify.git"
+  },
+  "keywords": [
+    "web",
+    "notification",
+    "html5"
+  ],
+  "author": "Prashanth Rajaram",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prashanthr/WebNotify/issues"
+  },
+  "homepage": "https://github.com/prashanthr/WebNotify#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "path": "^0.12.7",
+    "qunitjs": "^2.0.0-rc1"
+  }
+}

@@ -3,7 +3,7 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/notification
 // Prashanth R
 */
-module.exports = function NotificationBase() {
+module.exports = function notificationBase() {
 	this.notification = null;
 
 	//initialize
