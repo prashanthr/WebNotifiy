@@ -6,19 +6,14 @@
 module.exports = function notificationBase() {
 	this.notification = null;
 
-	//initialize
-	if(this.areNotificationsSupported()) {
-		if(!this.hasPermissionBeenGranted()) {
-			this.requestPermission();
-		}
-	}
-
 	this.areNotificationsSupported = function() {
     	let isSupported = true;
     	if (!("Notification" in window)) {
 	    console.warn("This browser does not support desktop notifications");
 	  	isSupported = false;
-	  }
+	  } else {
+        console.log("Notifications are supported");
+      }
 	  return isSupported;
     }
 
@@ -34,5 +29,14 @@ module.exports = function notificationBase() {
 
     this.hasPermissionBeenGranted = function() {
     	return Notification.permission === "granted";
+    }
+
+    //initialize
+    if(this.areNotificationsSupported()) {
+        if(!this.hasPermissionBeenGranted()) {
+            this.requestPermission().then({
+                console.log('Permission has beeen requested');
+            });
+        }
     }
 }
